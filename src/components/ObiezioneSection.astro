@@ -2,7 +2,7 @@
 import CTAButton from './CTAButton.astro';
 ---
 
-<section class="py-20 bg-[#EDE5CF]">
+<section class="py-20 bg-[#FAF6EE]">
   <div class="max-w-2xl mx-auto px-6">
 
     <div class="mb-12">
@@ -37,29 +37,27 @@ import CTAButton from './CTAButton.astro';
       </p>
     </div>
 
-    <div class="bg-[#1C1A14] rounded-sm p-8 mb-12">
-      <p class="text-[#FAF6EE] text-lg leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
-        Ma se anche solo una volta ti è capitato di:
-      </p>
-      <ul class="space-y-3 mb-6">
-        {[
-          "pasta che non regge la cottura sui grandi numeri",
-          "dover cambiare un piatto perché il fornitore non ti seguiva",
-          "ritardi, scuse, rimpalli di responsabilità",
-          "ore di cucina bruciate a fare tutto in casa",
-        ].map(item => (
-          <li class="flex items-start gap-3 text-[#EDE5CF]/80 text-lg" style="font-family: 'Lato', sans-serif;">
-            <svg class="w-5 h-5 text-[#8B2020] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
-            </svg>
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-      <p class="text-[#E5A828] font-bold text-xl" style="font-family: 'Playfair Display', serif;">
-        …allora ha senso, almeno, mettermi alla prova.
-      </p>
-    </div>
+    <p class="text-[#3D3828] text-lg leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Ma se anche solo una volta ti è capitato di:
+    </p>
+    <ul class="space-y-3 mb-6">
+      {[
+        "trovarti con pasta che non regge la cottura sui grandi numeri",
+        "dover cambiare un piatto perché il fornitore non ti seguiva",
+        "fare i conti con ritardi, scuse, rimpalli di responsabilità",
+        "sacrificare ore di cucina per farti tutto in casa",
+      ].map(item => (
+        <li class="flex items-start gap-3 text-[#3D3828] text-lg" style="font-family: 'Lato', sans-serif;">
+          <svg class="w-5 h-5 text-[#8B2020] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="text-[#C8891A] font-bold text-xl mb-12" style="font-family: 'Playfair Display', serif;">
+      …allora ha senso, almeno, mettermi alla prova.
+    </p>
 
     <CTAButton />
   </div>
