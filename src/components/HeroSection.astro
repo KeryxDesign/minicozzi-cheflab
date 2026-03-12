@@ -1,5 +1,6 @@
 ---
 import CTAButton from './CTAButton.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="min-h-screen bg-[#FAF6EE] relative overflow-hidden flex items-center">
@@ -11,10 +12,10 @@ import CTAButton from './CTAButton.astro';
     <!-- Logo -->
     <div class="text-center mb-10">
       <img
-        src="/images/logo.png"
+        src={`${base}images/logo.png`}
         alt="Minicozzi ChefLab"
-        class="mx-auto h-36 w-auto"
-        onerror="this.onerror=null;this.src='/images/logo-placeholder.svg';"
+        class="mx-auto h-48 w-auto"
+        onerror={`this.onerror=null;this.src='${base}images/logo-placeholder.svg';`}
       />
     </div>
 
