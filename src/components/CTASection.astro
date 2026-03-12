@@ -1,6 +1,7 @@
 ---
 const waMsg = encodeURIComponent("Ciao Gianfranco! Ho letto del Minicozzi Chef Lab e mi interessa la prova gratuita. Possiamo parlare?");
 const waUrl = `https://wa.me/393381694969?text=${waMsg}`;
+const base = import.meta.env.BASE_URL;
 ---
 
 <section id="prova-gratis" class="py-24 bg-carta">
@@ -40,8 +41,18 @@ const waUrl = `https://wa.me/393381694969?text=${waMsg}`;
       Ti rispondo entro poche ore. Nessun impegno.
     </p>
 
+    <!-- Foto Gianfranco con chef -->
+    <div class="mt-10 mb-6 rounded-sm overflow-hidden shadow-md">
+      <img
+        src={`${base}images/gianfranco-cucina.jpg`}
+        alt="Gianfranco Ranaldo nel laboratorio con gli chef"
+        class="w-full h-44 md:h-64 object-cover"
+        onerror={`this.onerror=null;this.src='${base}images/gianfranco-cucina-placeholder.svg';this.classList.remove('object-cover');this.classList.add('object-contain');`}
+      />
+    </div>
+
     <!-- Firma -->
-    <div class="border-t border-[#C8891A]/30 mt-14 pt-10">
+    <div class="border-t border-[#C8891A]/30 mt-8 pt-10">
       <p class="text-[#3D3828] text-lg mb-5" style="font-family: 'Lato', sans-serif;">
         Non vedo l'ora di contribuire al successo del tuo ristorante.
       </p>

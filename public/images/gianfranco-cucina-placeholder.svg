@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EDE5CF"/>
+      <stop offset="100%" style="stop-color:#E8DFC9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="300" fill="url(#cbg)" rx="4"/>
+  <rect x="8" y="8" width="704" height="284" rx="2" fill="none" stroke="#C8891A" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Left person: Gianfranco (with chef hat suggestion) -->
+  <g transform="translate(220, 45)">
+    <!-- Head -->
+    <circle cx="40" cy="50" r="28" fill="#C8891A" opacity="0.2"/>
+    <text x="40" y="56" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="22" fill="#C8891A" opacity="0.5">GR</text>
+    <!-- Body -->
+    <path d="M12 85 Q12 78 40 78 Q68 78 68 85 L68 130 L12 130 Z" fill="#C8891A" opacity="0.15" rx="4"/>
+    <!-- Speech lines -->
+    <path d="M75 40 L95 30" stroke="#C8891A" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+    <path d="M75 50 L100 50" stroke="#C8891A" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+    <path d="M75 60 L95 70" stroke="#C8891A" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+  </g>
+
+  <!-- Handshake icon in center -->
+  <g transform="translate(330, 90)" opacity="0.3">
+    <path d="M30 25 Q20 15 10 20 L0 30 L15 45 L25 35 Q35 45 45 40 L55 30 Q45 20 35 25 Z" fill="#C8891A" stroke="#C8891A" stroke-width="1"/>
+  </g>
+
+  <!-- Right person: Chef -->
+  <g transform="translate(420, 45)">
+    <!-- Chef hat -->
+    <path d="M20 30 Q20 10 40 10 Q60 10 60 30" fill="#C8891A" opacity="0.15"/>
+    <rect x="18" y="28" width="44" height="8" rx="2" fill="#C8891A" opacity="0.15"/>
+    <!-- Head -->
+    <circle cx="40" cy="50" r="28" fill="#C8891A" opacity="0.15"/>
+    <text x="40" y="56" text-anchor="middle" font-family="'Lato', Helvetica, sans-serif" font-weight="700" font-size="14" fill="#C8891A" opacity="0.4">CHEF</text>
+    <!-- Body with apron -->
+    <path d="M12 85 Q12 78 40 78 Q68 78 68 85 L68 130 L12 130 Z" fill="#C8891A" opacity="0.1" rx="4"/>
+    <path d="M24 85 L24 130 L56 130 L56 85" fill="#FAF6EE" opacity="0.3"/>
+  </g>
+
+  <!-- Kitchen counter line -->
+  <rect x="180" y="180" width="360" height="4" rx="2" fill="#C8891A" opacity="0.15"/>
+
+  <!-- Label -->
+  <g transform="translate(360, 225)">
+    <rect x="-115" y="-14" width="230" height="32" rx="3" fill="#3D3828" opacity="0.85"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'Lato', Helvetica, sans-serif" font-weight="900" font-size="12" fill="#FAF6EE" letter-spacing="2">GIANFRANCO CON GLI CHEF</text>
+  </g>
+
+  <text x="360" y="270" text-anchor="middle" font-family="'Lato', Helvetica, sans-serif" font-size="11" fill="#8A8070" font-style="italic">Foto reale in arrivo</text>
+</svg>

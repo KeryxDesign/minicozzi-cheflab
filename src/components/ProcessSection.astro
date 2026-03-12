@@ -2,11 +2,11 @@
 import CTAButton from './CTAButton.astro';
 
 const steps = [
-  { n:"1", title:"Scrivimi su WhatsApp.", desc:"Mi dai poche info: tipo di ristorante, coperti medi, zona. Ci vuole un minuto." },
-  { n:"2", title:"Ti richiamo io — di persona.", desc:"Non un assistente, non un call center. Parliamo di cucina, di numeri, di quello che ti serve davvero." },
-  { n:"3", title:"Definiamo la giornata di prova.", desc:"Quando farla, quanti kg, quali formati testare. Tutto su misura." },
-  { n:"4", title:"Ti arriva la pasta. La metti in servizio.", desc:"Cucini per i tuoi clienti. Io sono reperibile se serve qualcosa." },
-  { n:"5", title:"Decidi tu.", desc:"Se divento il tuo partner, bene. Se no — avrai comunque fatto un servizio con pasta fresca su misura, gratis." },
+  { n:"1", icon:"💬", title:"Scrivimi su WhatsApp.", desc:"Mi dai poche info: tipo di ristorante, coperti medi, zona. Ci vuole un minuto." },
+  { n:"2", icon:"📞", title:"Ti richiamo io — di persona.", desc:"Non un assistente, non un call center. Parliamo di cucina, di numeri, di quello che ti serve davvero." },
+  { n:"3", icon:"📋", title:"Definiamo la giornata di prova.", desc:"Quando farla, quanti kg, quali formati testare. Tutto su misura." },
+  { n:"4", icon:"🍝", title:"Ti arriva la pasta. La metti in servizio.", desc:"Cucini per i tuoi clienti. Io sono reperibile se serve qualcosa." },
+  { n:"5", icon:"🤝", title:"Decidi tu.", desc:"Se divento il tuo partner, bene. Se no — avrai comunque fatto un servizio con pasta fresca su misura, gratis." },
 ];
 ---
 
@@ -34,7 +34,7 @@ const steps = [
             </div>
             <!-- Content -->
             <div class="flex-1 bg-[#FAF6EE] rounded-sm p-5 shadow-sm border-l-2 border-[#C8891A]/20">
-              <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;">{step.title}</p>
+              <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;"><span class="mr-2" aria-hidden="true">{step.icon}</span>{step.title}</p>
               <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>
             </div>
           </div>
