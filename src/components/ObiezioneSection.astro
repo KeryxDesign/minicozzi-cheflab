@@ -1,5 +1,5 @@
 ---
-import CTAButton from './CTAButton.astro';
+import CTATextLink from './CTATextLink.astro';
 ---
 
 <section class="py-20 bg-[#FAF6EE]">
@@ -37,6 +37,13 @@ import CTAButton from './CTAButton.astro';
       </p>
     </div>
 
+    <!-- Divider ornamentale -->
+    <div class="flex items-center justify-center gap-4 my-8">
+      <div class="h-px bg-[#C8891A]/30 flex-1"></div>
+      <span class="text-[#C8891A] text-lg">✦</span>
+      <div class="h-px bg-[#C8891A]/30 flex-1"></div>
+    </div>
+
     <p class="text-[#3D3828] text-lg leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
       Ma se anche solo una volta ti è capitato di:
     </p>
@@ -59,6 +66,6 @@ import CTAButton from './CTAButton.astro';
       …allora ha senso, almeno, mettermi alla prova.
     </p>
 
-    <CTAButton />
+    <CTATextLink />
   </div>
 </section>
