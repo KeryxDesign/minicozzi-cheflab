@@ -1,6 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
-  <rect width="200" height="100" fill="#EDE5CF" rx="4"/>
-  <text x="100" y="38" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#C8891A" text-anchor="middle">MINICOZZI</text>
-  <text x="100" y="62" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#1C1A14" text-anchor="middle">ChefLab</text>
-  <text x="100" y="80" font-family="Georgia, serif" font-size="9" fill="#8A8070" text-anchor="middle" font-style="italic">Pasta fresca su misura in 72h</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="200" viewBox="0 0 360 200">
+  <rect width="360" height="200" fill="#EDE5CF" rx="8"/>
+
+  <!-- Wheat stalks decorative -->
+  <g transform="translate(80, 30)" opacity="0.15" fill="#C8891A">
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="rotate(-30)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="translate(6,-14) rotate(-15)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="translate(3,-28) rotate(-5)"/>
+    <line x1="2" y1="0" x2="5" y2="30" stroke="#C8891A" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(280, 30) scale(-1,1)" opacity="0.15" fill="#C8891A">
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="rotate(-30)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="translate(6,-14) rotate(-15)"/>
+    <ellipse cx="0" cy="0" rx="4" ry="10" transform="translate(3,-28) rotate(-5)"/>
+    <line x1="2" y1="0" x2="5" y2="30" stroke="#C8891A" stroke-width="1.5"/>
+  </g>
+
+  <!-- Rolling pin icon -->
+  <g transform="translate(180, 52)">
+    <rect x="-30" y="-5" width="60" height="10" rx="5" fill="#C8891A" opacity="0.2"/>
+    <rect x="-38" y="-4" width="10" height="8" rx="3" fill="#C8891A" opacity="0.25"/>
+    <rect x="28" y="-4" width="10" height="8" rx="3" fill="#C8891A" opacity="0.25"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="180" y="95" font-family="Georgia, 'Playfair Display', serif" font-size="36" font-weight="900" fill="#C8891A" text-anchor="middle" letter-spacing="3">MINICOZZI</text>
+  <text x="180" y="128" font-family="Georgia, 'Playfair Display', serif" font-size="28" font-weight="700" fill="#1C1A14" text-anchor="middle">Chef<tspan fill="#C8891A">Lab</tspan></text>
+
+  <!-- Ornamental line -->
+  <line x1="100" y1="140" x2="260" y2="140" stroke="#C8891A" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="180" cy="140" r="3" fill="#C8891A" opacity="0.3"/>
+
+  <!-- Tagline -->
+  <text x="180" y="162" font-family="Georgia, 'Playfair Display', serif" font-size="12" fill="#8A8070" text-anchor="middle" font-style="italic">Pasta fresca su misura in 72h</text>
+
+  <!-- Bottom accent -->
+  <text x="180" y="182" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#8A8070" text-anchor="middle" letter-spacing="3" text-transform="uppercase">AZIENDA AGRICOLA MINICOZZI</text>
 </svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="148" fill="#E8DFC9"/>
+  <circle cx="150" cy="150" r="148" fill="url(#grain)" opacity="0.3"/>
+
+  <!-- Subtle grain pattern -->
+  <defs>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.5" fill="#B8A88A" opacity="0.3"/>
+      <circle cx="3" cy="3" r="0.4" fill="#B8A88A" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Inner circle accent -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="#C8891A" stroke-width="1" opacity="0.2"/>
+
+  <!-- Initials -->
+  <text x="150" y="170" font-family="Georgia, 'Playfair Display', serif" font-size="90" font-weight="700" fill="#C8891A" text-anchor="middle" opacity="0.85">GR</text>
+
+  <!-- Small label -->
+  <text x="150" y="210" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#8A8070" text-anchor="middle" letter-spacing="2">FONDATORE</text>
+
+  <!-- Border ring -->
+  <circle cx="150" cy="150" r="146" fill="none" stroke="#C8891A" stroke-width="3" opacity="0.4"/>
+</svg>
