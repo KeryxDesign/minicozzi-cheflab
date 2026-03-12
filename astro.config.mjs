@@ -4,6 +4,8 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  site: 'https://keryxdesign.github.io',
+  base: '/minicozzi-cheflab',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
