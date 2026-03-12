@@ -1,0 +1,50 @@
+---
+import CTAButton from './CTAButton.astro';
+
+const steps = [
+  { n:"1", title:"Scrivimi su WhatsApp.", desc:"Mi dai poche info: tipo di ristorante, coperti medi, zona. Ci vuole un minuto." },
+  { n:"2", title:"Ti richiamo io — di persona.", desc:"Non un assistente, non un call center. Parliamo di cucina, di numeri, di quello che ti serve davvero." },
+  { n:"3", title:"Definiamo la giornata di prova.", desc:"Quando farla, quanti kg, quali formati testare. Tutto su misura." },
+  { n:"4", title:"Ti arriva la pasta. La metti in servizio.", desc:"Cucini per i tuoi clienti. Io sono reperibile se serve qualcosa." },
+  { n:"5", title:"Decidi tu.", desc:"Se divento il tuo partner, bene. Se no — avrai comunque fatto un servizio con pasta fresca su misura, gratis." },
+];
+---
+
+<section class="py-20 bg-[#EDE5CF]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#C8891A] uppercase tracking-widest text-base font-bold mb-4" style="font-family: 'Lato', sans-serif;">Come funziona in pratica</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        Cinque passi.<br/>
+        <span class="italic text-[#C8891A]">Nessun contratto da firmare.</span>
+      </h2>
+    </div>
+
+    <div class="space-y-5 mb-12">
+      {steps.map(step => (
+        <div class="flex items-start gap-5 bg-[#FAF6EE] rounded-sm p-6 shadow-sm">
+          <div class="w-11 h-11 rounded-sm bg-[#C8891A] text-white font-black text-xl flex items-center justify-center flex-shrink-0" style="font-family: 'Playfair Display', serif;">
+            {step.n}
+          </div>
+          <div>
+            <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;">{step.title}</p>
+            <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1C1A14] rounded-sm p-8 mb-12 text-center">
+      <p class="text-[#E5A828] font-black uppercase tracking-widest text-base mb-3" style="font-family: 'Lato', sans-serif;">Attenzione</p>
+      <p class="text-[#FAF6EE] text-xl leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Accetto solo un numero limitato di ristoranti ogni mese.
+      </p>
+      <p class="text-[#EDE5CF]/70 text-lg mt-3" style="font-family: 'Lato', sans-serif;">
+        Non posso seguire tutti. Voglio seguire bene chi lavora con me.
+      </p>
+    </div>
+
+    <CTAButton size="large" />
+  </div>
+</section>

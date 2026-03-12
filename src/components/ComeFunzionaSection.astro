@@ -1,0 +1,72 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Ci dici cosa ti serve",
+    desc: "Formato, spessore, impasto, kg necessari. Ogni dettaglio pensato per il tuo menu. Parliamo da chef a chef.",
+    icon: "📋",
+  },
+  {
+    number: "02",
+    title: "Produciamo su misura",
+    desc: "Il nostro laboratorio artigianale lavora esclusivamente il tuo ordine. Materie prime campane, impasto fresco ogni giorno.",
+    icon: "🧑‍🍳",
+  },
+  {
+    number: "03",
+    title: "Consegna in 72 ore",
+    desc: "La tua pasta arriva pronta per il servizio, con temperatura garantita e documentazione di tracciabilità.",
+    icon: "🚚",
+  },
+];
+---
+
+<section class="py-20 bg-[#FAF6EE]">
+  <div class="max-w-4xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+      <p class="text-[#C8891A] uppercase tracking-widest text-sm font-bold mb-3" style="font-family: 'Lato', sans-serif;">Come funziona</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        Tre passi verso la pasta fresca<br/>
+        <span class="italic text-[#C8891A]">che fa tornare i clienti</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {steps.map((step) => (
+        <div class="relative text-center">
+          <!-- Step number -->
+          <div class="text-[#C8891A]/15 font-black text-8xl leading-none select-none absolute -top-4 left-1/2 -translate-x-1/2" style="font-family: 'Playfair Display', serif;">
+            {step.number}
+          </div>
+
+          <div class="relative z-10 pt-8">
+            <span class="text-5xl block mb-4">{step.icon}</span>
+            <h3 class="text-xl font-bold text-[#1C1A14] mb-3" style="font-family: 'Playfair Display', serif;">{step.title}</h3>
+            <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>
+          </div>
+
+          <!-- Connector arrow (not on last) -->
+          {step.number !== "03" && (
+            <div class="hidden md:block absolute top-16 -right-4 text-[#C8891A]/40 text-2xl z-20">→</div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <!-- Highlight box -->
+    <div class="mt-14 bg-[#1C1A14] text-[#FAF6EE] rounded-sm p-8 md:p-10 flex flex-col md:flex-row items-center gap-6">
+      <div class="text-6xl flex-shrink-0">⏱</div>
+      <div>
+        <p class="text-[#E5A828] uppercase text-sm tracking-widest font-bold mb-1" style="font-family: 'Lato', sans-serif;">La differenza Minicozzi</p>
+        <p class="text-2xl font-bold" style="font-family: 'Playfair Display', serif;">
+          Ordina oggi. Pasta fresca in laboratorio domani. Sul tuo tavolo in 72 ore.
+        </p>
+        <p class="text-[#EDE5CF]/70 mt-2 text-base" style="font-family: 'Lato', sans-serif;">
+          Quantità minima: 20 kg. Nessun massimale. Adatto per catering da 100 a 2.000 coperti.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

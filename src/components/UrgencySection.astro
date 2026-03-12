@@ -1,0 +1,72 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="py-20 bg-[#FAF6EE]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="text-center mb-10">
+      <p class="text-[#C8891A] uppercase tracking-widest text-sm font-bold mb-4" style="font-family: 'Lato', sans-serif;">Perché approfittare ora</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        Perché approfittare di questa offerta<br/>
+        <span class="italic text-[#C8891A]">e non "più avanti"</span>
+      </h2>
+    </div>
+
+    <p class="text-[#3D3828] text-lg leading-relaxed mb-6" style="font-family: 'Lato', sans-serif;">
+      Ogni stagione porta con sé eventi, menu speciali, periodi di fuoco.
+      E momenti in cui ti prometti:
+    </p>
+
+    <div class="bg-[#EDE5CF] border-l-4 border-[#8A8070] pl-6 py-4 mb-8 rounded-r-sm italic">
+      <p class="text-[#3D3828] text-lg" style="font-family: 'Playfair Display', serif;">
+        "Appena ho un attimo, sistemo la questione pasta."
+      </p>
+    </div>
+
+    <p class="text-[#3D3828] text-lg leading-relaxed mb-6" style="font-family: 'Lato', sans-serif;">
+      Quel "appena ho un attimo" raramente arriva. Intanto continui a:
+    </p>
+
+    <ul class="space-y-3 mb-8">
+      {[
+        "fare tu la pasta quando sei già tirato coi tempi;",
+        "o sperare che il fornitore non ti lasci scoperto sul servizio più importante dell'anno.",
+      ].map(item => (
+        <li class="flex items-start gap-3 text-[#3D3828] text-base" style="font-family: 'Lato', sans-serif;">
+          <svg class="w-4 h-4 text-[#8B2020] flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
+          <span class="text-lg">{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="bg-[#1C1A14] rounded-sm p-8 mb-10">
+      <p class="text-[#E5A828] font-bold text-lg mb-2" style="font-family: 'Playfair Display', serif; font-style: italic;">
+        La verità è che il momento giusto per testare un nuovo partner è quando sei ancora in controllo,
+        non quando stai già spegnendo incendi.
+      </p>
+    </div>
+
+    <div class="text-center mb-10">
+      <p class="text-[#3D3828] text-lg leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+        Se sei arrivato a leggere fin qui, significa che l'argomento per te conta davvero.
+      </p>
+      <p class="text-xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        Fai una cosa semplice, adesso.
+      </p>
+      <p class="text-[#C8891A] text-xl italic mt-1" style="font-family: 'Playfair Display', serif;">
+        Chiedi la tua giornata di pasta in regalo.
+      </p>
+      <p class="text-[#3D3828] text-base mt-4 leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Mettimi alla prova in un servizio vero, senza limiti di kg, senza rischi per te.
+        E poi, lasciamo che sia la tua sala a decidere se restare dove sei…
+        <span class="italic">…o se è finalmente il caso di cambiare partner per la pasta.</span>
+      </p>
+    </div>
+
+    <CTAButton size="large" />
+
+  </div>
+</section>

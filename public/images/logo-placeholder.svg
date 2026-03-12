@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#EDE5CF" rx="4"/>
+  <text x="100" y="38" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#C8891A" text-anchor="middle">MINICOZZI</text>
+  <text x="100" y="62" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#1C1A14" text-anchor="middle">ChefLab</text>
+  <text x="100" y="80" font-family="Georgia, serif" font-size="9" fill="#8A8070" text-anchor="middle" font-style="italic">Pasta fresca su misura in 72h</text>
+</svg>

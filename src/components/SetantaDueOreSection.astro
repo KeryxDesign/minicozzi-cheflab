@@ -1,0 +1,67 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="py-20 bg-[#FAF6EE]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#C8891A] uppercase tracking-widest text-base font-bold mb-4" style="font-family: 'Lato', sans-serif;">La promessa</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        72 ore tra la tua idea<br/>
+        <span class="italic text-[#C8891A]">e il piatto in carta</span>
+      </h2>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Hai in mente un nuovo piatto per un evento da 200 persone?
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Vuoi testare un formato per il menu degustazione?
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-12" style="font-family: 'Lato', sans-serif;">
+      Devi coprire un weekend di fuoco con una pasta che regga i numeri?
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="border border-[#8B2020]/20 rounded-sm p-6 bg-[#8B2020]/03" style="background-color: rgba(139,32,32,0.03);">
+        <p class="text-[#8B2020] font-bold text-base uppercase tracking-wide mb-4" style="font-family: 'Lato', sans-serif;">Invece di:</p>
+        <ul class="space-y-3">
+          {["Bloccare la cucina per prove infinite", "Stressare la brigata", "Affidarti alla buona volontà di un fornitore generico"].map(item => (
+            <li class="flex items-start gap-3 text-[#3D3828] text-base" style="font-family: 'Lato', sans-serif;">
+              <svg class="w-4 h-4 text-[#8B2020] flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="border border-[#C8891A]/30 rounded-sm p-6" style="background-color: rgba(200,137,26,0.05);">
+        <p class="text-[#C8891A] font-bold text-base uppercase tracking-wide mb-4" style="font-family: 'Lato', sans-serif;">Ricevi una pasta:</p>
+        <ul class="space-y-3">
+          {["Calibrata sui tuoi coperti", "Con tempi di cottura condivisi con te", "Pensata per reggere i picchi"].map(item => (
+            <li class="flex items-start gap-3 text-[#3D3828] text-base" style="font-family: 'Lato', sans-serif;">
+              <svg class="w-4 h-4 text-[#C8891A] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Qui in Campania il primo piatto è il cuore del menu.
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      È quello per cui tornano i clienti. Quello che ti fa la reputazione.
+    </p>
+    <p class="text-lg md:text-xl font-semibold text-[#1C1A14] leading-relaxed mb-12" style="font-family: 'Lato', sans-serif;">
+      Per questo la pasta che ti serve deve essere all'altezza, sempre.
+    </p>
+
+    <CTAButton />
+  </div>
+</section>

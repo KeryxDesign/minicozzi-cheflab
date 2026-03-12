@@ -1,0 +1,125 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="py-20 bg-[#EDE5CF]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <p class="text-[#C8891A] font-bold text-xl mb-2" style="font-family: 'Playfair Display', serif;">Caro Ristoratore,</p>
+    <p class="text-[#3D3828] text-xl italic mb-12" style="font-family: 'Playfair Display', serif;">immagina questa scena.</p>
+
+    <!-- Scena -->
+    <div class="bg-[#FAF6EE] border-l-4 border-[#C8891A] pl-6 pr-6 py-6 rounded-r-sm mb-10 shadow-sm">
+      <p class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-3" style="font-family: 'Playfair Display', serif;">Sabato sera. Sala piena.</p>
+      <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Le prenotazioni sono a tappo. Il telefono non smette di squillare per la lista d'attesa.
+      </p>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      I tuoi primi piatti sono quelli che fanno girare il locale.
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-10" style="font-family: 'Lato', sans-serif;">
+      I paccheri che i clienti chiedono per nome. I ravioli che fotografano prima di mangiare. I fusilloni di cui parla mezza città.
+    </p>
+
+    <p class="text-xl font-bold text-[#1C1A14] mb-5" style="font-family: 'Playfair Display', serif;">E proprio stasera:</p>
+
+    <ul class="space-y-4 mb-12">
+      {[
+        "La pasta \"di fiducia\" arriva in ritardo. Di nuovo.",
+        "Si spezza in cottura quando spingi sui numeri.",
+        "Il fornitore ti guarda male quando chiedi quel formato studiato per il tuo menu.",
+      ].map(item => (
+        <li class="flex items-start gap-4 bg-[#FAF6EE] rounded-sm px-5 py-4">
+          <svg class="w-5 h-5 text-[#8B2020] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          <span class="text-[#3D3828] text-lg" style="font-family: 'Lato', sans-serif;">{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="bg-[#FAF6EE] border border-[#C8891A]/20 rounded-sm p-6 mb-10">
+      <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Oppure te la fai tu. Buonissima, certo.
+      </p>
+      <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mt-3" style="font-family: 'Lato', sans-serif;">
+        Ma quante ore hai bruciato in prove e impasti? Quanta energia sottratta al resto del ristorante?
+      </p>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-10" style="font-family: 'Lato', sans-serif;">
+      Se almeno una di queste situazioni ti è familiare, ho creato Minicozzi Chef Lab proprio per questo.
+    </p>
+
+    <!-- La promessa -->
+    <div class="text-center py-10 border-y-2 border-[#C8891A]/30 mb-12">
+      <p class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-3" style="font-family: 'Playfair Display', serif;">
+        Non ti vendo pasta.
+      </p>
+      <p class="text-xl md:text-2xl text-[#C8891A] italic" style="font-family: 'Playfair Display', serif;">
+        Ti propongo di non preoccuparti<br/>mai più per la pasta fresca.
+      </p>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      La pasta fresca non è roba che si compra e basta.
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-12" style="font-family: 'Lato', sans-serif;">
+      È una scelta di fiducia. Chi sta in cucina lo sa.
+    </p>
+
+    <!-- Due possibilità -->
+    <h3 class="text-xl md:text-2xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+      Oggi hai solo due possibilità:
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <div class="bg-[#FAF6EE] border border-[#C8891A]/20 rounded-sm p-6">
+        <p class="font-bold text-[#1C1A14] text-lg mb-3" style="font-family: 'Playfair Display', serif;">Te la fai in casa.</p>
+        <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">
+          Qualità altissima. Ma ti divora tempo e personale. Ogni nuovo piatto in carta significa ricominciare da zero.
+        </p>
+      </div>
+      <div class="bg-[#FAF6EE] border border-[#C8891A]/20 rounded-sm p-6">
+        <p class="font-bold text-[#1C1A14] text-lg mb-3" style="font-family: 'Playfair Display', serif;">La compri da altri.</p>
+        <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">
+          Funziona… finché non ti serve qualcosa di diverso. O arriva un'urgenza. O il pacchero non regge la sala piena.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Qui in Campania la pasta fresca è seria.
+    </p>
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      I tuoi clienti sanno riconoscerla. I tuoi colleghi ti giudicano da come tiene in cottura.
+    </p>
+    <p class="text-lg md:text-xl font-semibold text-[#1C1A14] leading-relaxed mb-10" style="font-family: 'Lato', sans-serif;">
+      Non puoi permetterti mezze misure.
+    </p>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Per questo ho creato Minicozzi Chef Lab:
+    </p>
+
+    <ul class="space-y-4 mb-12">
+      {[
+        "Liberare tempo in cucina senza perdere controllo sul piatto",
+        "Avere un prodotto studiato sul tuo servizio — non \"simile\" a quello che ti serve",
+        "Contare su un partner che non si gira dall'altra parte quando c'è un'emergenza",
+      ].map(item => (
+        <li class="flex items-start gap-4 text-[#3D3828] text-lg" style="font-family: 'Lato', sans-serif;">
+          <svg class="w-5 h-5 text-[#C8891A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <CTAButton />
+
+  </div>
+</section>

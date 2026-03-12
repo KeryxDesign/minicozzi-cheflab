@@ -1,0 +1,75 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="py-20 bg-[#FAF6EE]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#C8891A] uppercase tracking-widest text-base font-bold mb-4" style="font-family: 'Lato', sans-serif;">La mia scommessa personale</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">
+        Ti regalo una giornata intera di pasta.<br/>
+        <span class="italic text-[#C8891A]">Senza limiti di kg.</span>
+      </h2>
+    </div>
+
+    <p class="text-lg md:text-xl text-[#3D3828] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Se sono così sicuro del mio lavoro, è perché so che assaggiare un piatto non basta.
+    </p>
+    <p class="text-xl md:text-2xl font-bold italic text-[#1C1A14] mb-12" style="font-family: 'Playfair Display', serif;">
+      La vera prova è reggere un servizio vero.
+    </p>
+
+    <div class="bg-[#1C1A14] border-2 border-[#C8891A] rounded-sm p-8 mb-12 text-center">
+      <p class="text-[#FAF6EE] text-lg mb-2" style="font-family: 'Lato', sans-serif;">Per questo ho deciso:</p>
+      <p class="text-2xl md:text-3xl font-bold text-[#E5A828]" style="font-family: 'Playfair Display', serif;">
+        ti regalo la pasta per un'intera giornata di servizio.
+      </p>
+      <p class="text-[#EDE5CF]/70 text-lg mt-4" style="font-family: 'Lato', sans-serif;">
+        Un evento. Un sabato sera. Un pranzo importante.<br/>
+        <strong class="text-[#FAF6EE]">Decidi tu quanti kg. Nessun asterisco nascosto.</strong>
+      </p>
+    </div>
+
+    <p class="text-xl font-bold text-[#1C1A14] mb-8" style="font-family: 'Playfair Display', serif;">Come funziona:</p>
+
+    <div class="space-y-5 mb-12">
+      {[
+        { n:"1", title:"Ci incontriamo nella tua cucina.", desc:"Analizziamo il servizio insieme: coperti, piatti, organizzazione della linea." },
+        { n:"2", title:"Progettiamo la fornitura per la giornata test.", desc:"Scegliamo formati, quantità e caratteristiche in base a come lavori davvero — non su una tabella standard." },
+        { n:"3", title:"Ti mando la pasta. GRATIS.", desc:"La metti in servizio. La stressi. La porti al limite. Ti invito letteralmente a farle del male: tempi lunghi, tante comande, turni serrati." },
+        { n:"4", title:"Alla fine, decidi tu.", desc:"" },
+      ].map(step => (
+        <div class="flex items-start gap-5">
+          <div class="w-11 h-11 rounded-full bg-[#C8891A] text-white font-black text-xl flex items-center justify-center flex-shrink-0" style="font-family: 'Playfair Display', serif;">
+            {step.n}
+          </div>
+          <div class="flex-1 pt-1">
+            <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;">{step.title}</p>
+            {step.desc && <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>}
+            {step.n === "4" && (
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                <div class="bg-[#C8891A]/10 border border-[#C8891A]/30 rounded-sm p-4 text-base text-[#3D3828]" style="font-family: 'Lato', sans-serif;">
+                  <svg class="w-4 h-4 text-[#C8891A] mb-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                  Minicozzi Chef Lab diventa il tuo partner
+                </div>
+                <div class="bg-[#FAF6EE] border border-[#C8891A]/20 rounded-sm p-4 text-base text-[#3D3828]" style="font-family: 'Lato', sans-serif;">
+                  <svg class="w-4 h-4 text-[#8A8070] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  Decidi che non fa per te
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#EDE5CF] border-l-4 border-[#C8891A] pl-6 py-5 mb-12 rounded-r-sm">
+      <p class="text-[#1C1A14] font-bold text-lg" style="font-family: 'Playfair Display', serif;">
+        In ogni caso, quella giornata di pasta resta un mio investimento. Non un tuo rischio.
+      </p>
+    </div>
+
+    <CTAButton size="large" />
+  </div>
+</section>

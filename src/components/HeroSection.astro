@@ -1,0 +1,84 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="min-h-screen bg-[#FAF6EE] relative overflow-hidden flex items-center">
+  <!-- Gold bar top -->
+  <div class="absolute top-0 left-0 right-0 h-2 bg-[#C8891A]"></div>
+
+  <div class="container mx-auto px-6 py-16 max-w-3xl relative z-10">
+
+    <!-- Logo -->
+    <div class="text-center mb-10">
+      <img
+        src="/images/logo.png"
+        alt="Minicozzi ChefLab"
+        class="mx-auto h-36 w-auto"
+        onerror="this.onerror=null;this.src='/images/logo-placeholder.svg';"
+      />
+    </div>
+
+    <!-- Pre-headline -->
+    <div class="text-center mb-6">
+      <span class="inline-block bg-[#C8891A] text-white font-black tracking-widest uppercase text-sm px-6 py-2 rounded-sm" style="font-family: 'Lato', sans-serif;">
+        Ristoratore!
+      </span>
+    </div>
+
+    <!-- Headline letter-style -->
+    <div class="text-center mb-6">
+      <p class="text-[#1C1A14] text-xl md:text-2xl leading-relaxed" style="font-family: 'Playfair Display', serif;">
+        In Campania la pasta fresca è sacra,<br class="hidden md:block"/>
+        ecco perché <strong>non puoi commettere errori</strong>.<br/>
+        I clienti se ne accorgono. I colleghi parlano.
+      </p>
+      <p class="mt-5 text-[#8A8070] text-lg italic" style="font-family: 'Playfair Display', serif;">
+        Ti presento…
+      </p>
+    </div>
+
+    <!-- Main headline -->
+    <div class="text-center mb-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-[#1C1A14] leading-tight" style="font-family: 'Playfair Display', serif;">
+        <span class="text-[#C8891A]">Minicozzi</span> Chef<span class="text-[#C8891A]">Lab</span>
+      </h1>
+      <p class="text-xl md:text-2xl font-semibold text-[#3D3828] mt-2 italic" style="font-family: 'Playfair Display', serif;">
+        Pasta fresca su misura in 72 ore
+      </p>
+      <p class="text-base font-bold text-[#8A8070] uppercase tracking-widest mt-1" style="font-family: 'Lato', sans-serif;">
+        L'unica con la garanzia <span class="text-[#8B2020]">"Servizio Salvato"</span>
+      </p>
+    </div>
+
+    <!-- Ornament -->
+    <div class="flex items-center justify-center gap-4 my-8">
+      <div class="h-px bg-[#C8891A]/40 flex-1"></div>
+      <span class="text-[#C8891A] text-xl">✦</span>
+      <div class="h-px bg-[#C8891A]/40 flex-1"></div>
+    </div>
+
+    <!-- Offer box -->
+    <div class="bg-[#1C1A14] text-[#FAF6EE] rounded-sm px-8 py-8 text-center shadow-lg border-2 border-[#C8891A] mb-2">
+      <p class="text-[#E5A828] uppercase tracking-widest text-xs font-bold mb-3" style="font-family: 'Lato', sans-serif;">
+        Occasione limitata a pochi ristoratori
+      </p>
+      <p class="text-2xl md:text-3xl font-bold leading-snug mb-2" style="font-family: 'Playfair Display', serif;">
+        Prova <span class="text-[#E5A828]">GRATIS</span> la pasta fresca di Minicozzi Chef Lab<br/>
+        per un'intera giornata di servizio
+      </p>
+      <p class="text-[#EDE5CF]/80 text-base" style="font-family: 'Lato', sans-serif;">
+        Scegli tu quanti kg di pasta ti servono. Attenzione: è un'occasione limitata a pochi ristoratori!
+      </p>
+    </div>
+
+    <CTAButton size="large" />
+
+    <p class="text-center text-[#8A8070] text-sm italic -mt-4" style="font-family: 'Lato', sans-serif;">
+      Nessun impegno. Nessuna carta di credito. Solo pasta fresca vera.
+    </p>
+
+  </div>
+
+  <!-- Gold bar bottom -->
+  <div class="absolute bottom-0 left-0 right-0 h-2 bg-[#C8891A]"></div>
+</section>

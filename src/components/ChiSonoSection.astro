@@ -1,0 +1,86 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section class="py-20 bg-[#1C1A14]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#C8891A] uppercase tracking-widest text-base font-bold mb-4" style="font-family: 'Lato', sans-serif;">Chi c'è dietro Minicozzi Chef Lab</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#FAF6EE]" style="font-family: 'Playfair Display', serif;">
+        Perché parlo<br/>
+        <span class="italic text-[#E5A828]">la tua lingua</span>
+      </h2>
+    </div>
+
+    <div class="bg-white/5 border border-[#C8891A]/30 rounded-sm p-8 mb-8">
+      <p class="text-[#FAF6EE] text-xl font-bold mb-1" style="font-family: 'Playfair Display', serif;">Mi chiamo Gianfranco Ranaldo.</p>
+      <p class="text-[#EDE5CF]/80 text-lg leading-relaxed mt-3" style="font-family: 'Lato', sans-serif;">
+        Minicozzi Chef Lab è il laboratorio di pasta fresca su misura che ho creato dentro <span class="text-[#E5A828] font-semibold">Azienda Agricola Minicozzi</span>.
+      </p>
+      <p class="text-[#EDE5CF]/80 text-lg leading-relaxed mt-3" style="font-family: 'Lato', sans-serif;">
+        Con il grano e la pasta ci viviamo da anni. Non da ieri.
+      </p>
+    </div>
+
+    <p class="text-[#EDE5CF]/90 text-lg md:text-xl leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Io in cucina ci sto davvero.
+    </p>
+    <p class="text-[#EDE5CF]/90 text-lg md:text-xl leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+      Parlo con gli chef tutti i giorni. Discuto di tempi di cottura, consistenze, di <em class="text-[#FAF6EE]">"quanto regge il pacchero sul servizio di sabato sera"</em>.
+    </p>
+    <p class="text-[#EDE5CF]/90 text-lg md:text-xl leading-relaxed mb-10" style="font-family: 'Lato', sans-serif;">
+      Quando entro in un ristorante, non dico: <em class="text-[#FAF6EE]">"Ti lascio un po' di pasta, fammi sapere"</em>.
+    </p>
+
+    <div class="mb-10">
+      <p class="text-[#E5A828] font-bold text-base uppercase tracking-wide mb-5" style="font-family: 'Lato', sans-serif;">Analizzo il tuo servizio nel dettaglio:</p>
+      <ul class="space-y-3">
+        {[
+          "Quanti coperti fai",
+          "Come è strutturato il servizio",
+          "Quali primi si muovono di più",
+          "Se hai un pranzo, una cena o due turni pieni",
+          "Quanto margine hai in minuti tra una comanda e l'altra",
+        ].map(item => (
+          <li class="flex items-center gap-3 text-[#EDE5CF]/90 text-lg" style="font-family: 'Lato', sans-serif;">
+            <svg class="w-4 h-4 text-[#C8891A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="border-l-4 border-[#C8891A] pl-6 mb-10">
+      <p class="text-[#FAF6EE] text-lg md:text-xl leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+        Se servi 100–200 coperti, non puoi usare lo stesso pacchero sottile di una trattoria da 30.
+      </p>
+      <p class="text-[#FAF6EE] text-lg leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+        Ti propongo un pacchero più doppio e consistente, che:
+      </p>
+      <ul class="space-y-2">
+        {["Non si spacca in cottura", "Non ti tradisce al pass", "Ti dà margine anche quando le comande esplodono"].map(item => (
+          <li class="flex items-center gap-3 text-[#EDE5CF]/80 text-lg" style="font-family: 'Lato', sans-serif;">
+            <svg class="w-4 h-4 text-[#C8891A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="text-center border border-[#C8891A]/30 rounded-sm py-8 px-6 mb-10">
+      <p class="text-[#FAF6EE] text-xl md:text-2xl font-bold" style="font-family: 'Playfair Display', serif;">
+        Non è "solo pasta".
+      </p>
+      <p class="text-[#E5A828] text-xl md:text-2xl italic mt-2" style="font-family: 'Playfair Display', serif;">
+        È pasta progettata intorno al tuo servizio.
+      </p>
+    </div>
+
+    <CTAButton />
+  </div>
+</section>
