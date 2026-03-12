@@ -21,18 +21,25 @@ const steps = [
       </h2>
     </div>
 
-    <div class="space-y-5 mb-12">
-      {steps.map(step => (
-        <div class="flex items-start gap-5 bg-[#FAF6EE] rounded-sm p-6 shadow-sm">
-          <div class="w-11 h-11 rounded-sm bg-[#C8891A] text-white font-black text-xl flex items-center justify-center flex-shrink-0" style="font-family: 'Playfair Display', serif;">
-            {step.n}
+    <div class="relative mb-12">
+      <!-- Vertical timeline line -->
+      <div class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-[#C8891A]/30"></div>
+
+      <div class="space-y-0">
+        {steps.map((step, i) => (
+          <div class="relative flex items-start gap-5 pl-0 py-4">
+            <!-- Number badge on the line -->
+            <div class="relative z-10 w-11 h-11 rounded-full bg-[#C8891A] text-white font-black text-xl flex items-center justify-center flex-shrink-0 shadow-md" style="font-family: 'Playfair Display', serif;">
+              {step.n}
+            </div>
+            <!-- Content -->
+            <div class="flex-1 bg-[#FAF6EE] rounded-sm p-5 shadow-sm border-l-2 border-[#C8891A]/20">
+              <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;">{step.title}</p>
+              <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>
+            </div>
           </div>
-          <div>
-            <p class="font-bold text-[#1C1A14] text-lg mb-1" style="font-family: 'Lato', sans-serif;">{step.title}</p>
-            <p class="text-[#3D3828] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">{step.desc}</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
 
     <div class="border-2 border-[#8B2020] rounded-sm p-8 mb-12 text-center">
