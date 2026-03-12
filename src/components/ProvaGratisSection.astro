@@ -1,5 +1,6 @@
 ---
 import CTAButton from './CTAButton.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="py-20 bg-carta">
@@ -29,6 +30,16 @@ import CTAButton from './CTAButton.astro';
         Un evento. Un sabato sera. Un pranzo importante.<br/>
         <strong class="text-[#1C1A14]">Decidi tu quanti kg. Nessun asterisco nascosto.</strong>
       </p>
+    </div>
+
+    <!-- Foto laboratorio -->
+    <div class="mb-12 rounded-sm overflow-hidden shadow-md">
+      <img
+        src={`${base}images/laboratorio.jpg`}
+        alt="Il laboratorio Minicozzi ChefLab"
+        class="w-full h-56 md:h-72 object-cover"
+        onerror={`this.onerror=null;this.src='${base}images/laboratorio-placeholder.svg';this.classList.remove('object-cover');this.classList.add('object-contain');`}
+      />
     </div>
 
     <p class="text-xl font-bold text-[#1C1A14] mb-8" style="font-family: 'Playfair Display', serif;">Come funziona:</p>
