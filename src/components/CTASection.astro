@@ -1,7 +1,7 @@
 ---
 const waMsg = encodeURIComponent("Ciao Gianfranco! Ho letto del Minicozzi Chef Lab e mi interessa la prova gratuita. Possiamo parlare?");
 const waUrl = `https://wa.me/393381694969?text=${waMsg}`;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <section id="prova-gratis" class="py-24 bg-carta">
