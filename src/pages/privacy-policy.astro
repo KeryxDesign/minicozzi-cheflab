@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FooterSection from '../components/FooterSection.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout
+  title="Privacy Policy — Minicozzi ChefLab"
+  description="Informativa sulla privacy e cookie policy di Minicozzi Chef Lab ai sensi del GDPR e del D.Lgs. 196/2003."
+>
+
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+
+      <h1 class="text-3xl md:text-4xl font-black text-[#1C1A14] mb-2" style="font-family: 'Playfair Display', serif;">
+        Privacy Policy
+      </h1>
+      <p class="text-[#8A8070] text-sm mb-8" style="font-family: 'Lato', sans-serif;">
+        Ultimo aggiornamento: marzo 2026
+      </p>
+
+      <div class="space-y-8 text-[#1C1A14] text-base leading-relaxed" style="font-family: 'Lato', sans-serif;">
+
+        <!-- 1. Titolare -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">1. Titolare del trattamento</h2>
+          <p>
+            Il titolare del trattamento dei dati personali è:<br/>
+            <strong>Azienda Agricola Minicozzi</strong> di Gianfranco Ranaldo<br/>
+            Campania, Italia<br/>
+            P.IVA: in corso di registrazione<br/>
+            Email: <a href="mailto:info@minicozzicheflab.it" class="text-[#C8891A] hover:underline">info@minicozzicheflab.it</a><br/>
+            Tel: <a href="tel:+393381694969" class="text-[#C8891A] hover:underline">+39 338 169 4969</a>
+          </p>
+        </div>
+
+        <!-- 2. Dati raccolti -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">2. Tipologie di dati raccolti</h2>
+          <p class="mb-3">Durante la navigazione del sito, possono essere raccolti i seguenti dati:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Dati di navigazione:</strong> indirizzo IP, tipo di browser, sistema operativo, pagine visitate, orari di accesso. Questi dati sono raccolti automaticamente dai sistemi informatici preposti al funzionamento del sito (server di hosting).</li>
+            <li><strong>Dati forniti volontariamente:</strong> quando l'utente contatta il titolare via email, telefono o WhatsApp, i dati personali comunicati (nome, email, numero di telefono, contenuto del messaggio) sono trattati per rispondere alla richiesta.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Finalità -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">3. Finalità del trattamento</h2>
+          <p class="mb-3">I dati personali sono trattati per le seguenti finalità:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Funzionamento tecnico del sito web</li>
+            <li>Risposta alle richieste di contatto dell'utente</li>
+            <li>Adempimento di obblighi di legge</li>
+          </ul>
+        </div>
+
+        <!-- 4. Base giuridica -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">4. Base giuridica del trattamento</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Legittimo interesse</strong> del titolare per i dati di navigazione (art. 6, par. 1, lett. f, GDPR)</li>
+            <li><strong>Consenso dell'interessato</strong> per i dati forniti volontariamente tramite contatto diretto (art. 6, par. 1, lett. a, GDPR)</li>
+            <li><strong>Obbligo legale</strong> per gli adempimenti previsti dalla normativa vigente (art. 6, par. 1, lett. c, GDPR)</li>
+          </ul>
+        </div>
+
+        <!-- 5. Cookie -->
+        <div id="cookie-policy">
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">5. Cookie Policy</h2>
+          <p class="mb-3">
+            Questo sito utilizza esclusivamente <strong>cookie tecnici</strong> necessari al corretto funzionamento delle pagine web. Non vengono utilizzati cookie di profilazione o di tracciamento.
+          </p>
+          <p class="mb-3">
+            <strong>Servizi di terze parti:</strong>
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Google Fonts:</strong> il sito carica font dal servizio Google Fonts. Questo comporta una richiesta ai server di Google, che potrebbe raccogliere l'indirizzo IP dell'utente. Per maggiori informazioni: <span class="text-[#8A8070]">policies.google.com/privacy</span></li>
+            <li><strong>GitHub Pages:</strong> il sito è ospitato su GitHub Pages. Per la privacy policy di GitHub: <span class="text-[#8A8070]">docs.github.com/en/site-policy/privacy-policies</span></li>
+          </ul>
+        </div>
+
+        <!-- 6. Conservazione -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">6. Periodo di conservazione</h2>
+          <p>
+            I dati di navigazione vengono cancellati immediatamente dopo l'elaborazione statistica in forma aggregata. I dati forniti volontariamente dall'utente sono conservati per il tempo necessario a gestire la richiesta e comunque non oltre 24 mesi dall'ultimo contatto, salvo diversi obblighi di legge.
+          </p>
+        </div>
+
+        <!-- 7. Destinatari -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">7. Comunicazione e diffusione dei dati</h2>
+          <p>
+            I dati personali non vengono diffusi. Possono essere comunicati a soggetti terzi solo se necessario per l'adempimento di obblighi di legge o per la gestione tecnica del sito (provider di hosting).
+          </p>
+        </div>
+
+        <!-- 8. Diritti -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">8. Diritti dell'interessato</h2>
+          <p class="mb-3">
+            Ai sensi degli articoli 15-22 del Regolamento UE 2016/679 (GDPR), l'interessato ha diritto di:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Ottenere la conferma dell'esistenza di dati personali che lo riguardano e accedere ai propri dati</li>
+            <li>Ottenere la rettifica o la cancellazione dei dati</li>
+            <li>Ottenere la limitazione del trattamento</li>
+            <li>Ottenere la portabilità dei dati</li>
+            <li>Opporsi al trattamento</li>
+            <li>Revocare il consenso in qualsiasi momento</li>
+            <li>Proporre reclamo all'autorità di controllo (Garante per la protezione dei dati personali — <span class="text-[#8A8070]">garanteprivacy.it</span>)</li>
+          </ul>
+          <p class="mt-3">
+            Per esercitare i propri diritti, l'interessato può contattare il titolare all'indirizzo email: <a href="mailto:info@minicozzicheflab.it" class="text-[#C8891A] hover:underline">info@minicozzicheflab.it</a>
+          </p>
+        </div>
+
+        <!-- 9. Modifiche -->
+        <div>
+          <h2 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif;">9. Modifiche alla presente informativa</h2>
+          <p>
+            Il titolare si riserva il diritto di apportare modifiche alla presente informativa in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <FooterSection />
+</BaseLayout>

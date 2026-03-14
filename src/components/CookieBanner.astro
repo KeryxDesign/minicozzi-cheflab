@@ -1,0 +1,48 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden"
+  role="dialog"
+  aria-label="Informativa cookie"
+>
+  <div class="bg-[#1C1A14]/95 backdrop-blur-sm border-t border-[#C8891A]/30 px-6 py-4">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-[#FAF6EE] text-sm leading-relaxed text-center sm:text-left" style="font-family: 'Lato', sans-serif;">
+        Questo sito utilizza solo cookie tecnici necessari al funzionamento. Nessun cookie di profilazione.
+      </p>
+      <div class="flex items-center gap-3 shrink-0">
+        <a
+          href={`${base}privacy-policy/`}
+          class="text-[#C8891A] text-sm font-bold hover:text-[#E5A828] transition-colors whitespace-nowrap"
+          style="font-family: 'Lato', sans-serif;"
+        >
+          Maggiori info
+        </a>
+        <button
+          id="cookie-accept"
+          class="bg-[#C8891A] hover:bg-[#9E6A10] text-white text-sm font-bold px-5 py-2 rounded-sm transition-colors whitespace-nowrap cursor-pointer"
+          style="font-family: 'Lato', sans-serif;"
+        >
+          OK, ho capito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+
+  if (banner && !localStorage.getItem('cookie-consent')) {
+    banner.classList.remove('hidden');
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner?.classList.add('hidden');
+  });
+</script>

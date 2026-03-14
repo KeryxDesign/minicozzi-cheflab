@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 
 interface Props {
   title?: string;
@@ -21,6 +23,8 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
+    <CookieBanner />
   </body>
 </html>

@@ -1,14 +1,18 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <footer class="bg-[#1C1A14] text-[#FAF6EE] py-12">
   <div class="max-w-4xl mx-auto px-6">
+
     <div class="flex flex-col md:flex-row items-center justify-between gap-8">
 
       <div class="text-center md:text-left">
-        <p class="text-2xl font-black" style="font-family: 'Playfair Display', serif;">
-          <span class="text-[#C8891A]">Minicozzi</span> Chef<span class="text-[#C8891A]">Lab</span>
-        </p>
+        <a href={base} class="hover:opacity-80 transition-opacity">
+          <p class="text-2xl font-black" style="font-family: 'Playfair Display', serif;">
+            <span class="text-[#C8891A]">Minicozzi</span> Chef<span class="text-[#C8891A]">Lab</span>
+          </p>
+        </a>
         <p class="text-[#8A8070] text-base mt-1 italic" style="font-family: 'Lato', sans-serif;">
           Pasta fresca su misura in 72 ore
         </p>
@@ -17,15 +21,28 @@
         </p>
       </div>
 
-      <div class="text-center text-[#8A8070] text-base space-y-2" style="font-family: 'Lato', sans-serif;">
-        <p><a href="mailto:info@minicozzicheflab.it" class="hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">info@minicozzicheflab.it</a></p>
-        <p><a href="tel:+393381694969" class="hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">+39 338 169 4969</a></p>
+      <!-- Nav links + contact -->
+      <div class="text-center space-y-3" style="font-family: 'Lato', sans-serif;">
+        <div class="flex items-center justify-center gap-4 text-sm font-bold uppercase tracking-wider">
+          <a href={`${base}chi-siamo/`} class="text-[#8A8070] hover:text-[#C8891A] transition-colors duration-200">Chi Siamo</a>
+          <span class="text-[#C8891A]/30">|</span>
+          <a href={`${base}contatti/`} class="text-[#8A8070] hover:text-[#C8891A] transition-colors duration-200">Contatti</a>
+        </div>
+        <p><a href="mailto:info@minicozzicheflab.it" class="text-[#8A8070] text-base hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">info@minicozzicheflab.it</a></p>
+        <p><a href="tel:+393381694969" class="text-[#8A8070] text-base hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">+39 338 169 4969</a></p>
       </div>
 
     </div>
 
-    <div class="border-t border-[#C8891A]/20 mt-8 pt-6 text-center text-[#8A8070] text-base" style="font-family: 'Lato', sans-serif;">
-      <p>© 2026 Minicozzi Chef Lab / Azienda Agricola Minicozzi — P.IVA in corso di registrazione — <a href="#" class="hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">Privacy Policy</a></p>
+    <div class="border-t border-[#C8891A]/20 mt-8 pt-6 text-center text-[#8A8070] text-sm" style="font-family: 'Lato', sans-serif;">
+      <p>
+        © 2026 Minicozzi Chef Lab / Azienda Agricola Minicozzi — P.IVA in corso di registrazione
+      </p>
+      <p class="mt-2">
+        <a href={`${base}privacy-policy/`} class="hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">Privacy Policy</a>
+        <span class="mx-2">·</span>
+        <a href={`${base}privacy-policy/#cookie-policy`} class="hover:text-[#C8891A] transition-colors duration-200 cursor-pointer">Cookie Policy</a>
+      </p>
     </div>
   </div>
 </footer>

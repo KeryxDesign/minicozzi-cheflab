@@ -1,0 +1,100 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: `${base}`, label: 'Home' },
+  { href: `${base}chi-siamo/`, label: 'Chi Siamo' },
+  { href: `${base}contatti/`, label: 'Contatti' },
+];
+---
+
+<header class="bg-[#FAF6EE] border-b border-[#C8891A]/30">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href={base} class="flex items-center gap-3 group">
+      <img
+        src={`${base}images/logo.png`}
+        alt="Minicozzi ChefLab"
+        class="h-10 md:h-12 w-auto"
+        onerror={`this.onerror=null;this.style.display='none';`}
+      />
+      <span class="text-lg md:text-xl font-black text-[#1C1A14] group-hover:text-[#C8891A] transition-colors" style="font-family: 'Playfair Display', serif;">
+        <span class="text-[#C8891A]">Minicozzi</span> Chef<span class="text-[#C8891A]">Lab</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6" style="font-family: 'Lato', sans-serif;">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${
+            currentPath === link.href || currentPath === link.href.replace(/\/$/, '')
+              ? 'text-[#C8891A]'
+              : 'text-[#3D3828] hover:text-[#C8891A]'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+      aria-label="Menu"
+      aria-expanded="false"
+    >
+      <span class="block w-6 h-0.5 bg-[#1C1A14] transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-[#1C1A14] transition-all duration-300" id="bar2"></span>
+      <span class="block w-6 h-0.5 bg-[#1C1A14] transition-all duration-300" id="bar3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="md:hidden hidden bg-[#FAF6EE] border-t border-[#C8891A]/20 px-6 pb-4">
+    <nav class="flex flex-col gap-3 pt-3" style="font-family: 'Lato', sans-serif;">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`text-base font-bold uppercase tracking-wider py-2 border-b border-[#C8891A]/10 transition-colors ${
+            currentPath === link.href || currentPath === link.href.replace(/\/$/, '')
+              ? 'text-[#C8891A]'
+              : 'text-[#3D3828] hover:text-[#C8891A]'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+
+      if (!isOpen) {
+        bar1?.classList.add('rotate-45', 'translate-y-[4px]');
+        bar2?.classList.add('opacity-0');
+        bar3?.classList.add('-rotate-45', '-translate-y-[4px]');
+      } else {
+        bar1?.classList.remove('rotate-45', 'translate-y-[4px]');
+        bar2?.classList.remove('opacity-0');
+        bar3?.classList.remove('-rotate-45', '-translate-y-[4px]');
+      }
+    });
+  }
+</script>

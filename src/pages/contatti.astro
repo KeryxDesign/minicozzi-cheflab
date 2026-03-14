@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FooterSection from '../components/FooterSection.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout
+  title="Contatti — Minicozzi ChefLab"
+  description="Contatta Gianfranco Ranaldo di Minicozzi Chef Lab. Telefono, email, WhatsApp. Visita il laboratorio di pasta fresca in Campania."
+>
+
+  <!-- Hero mini -->
+  <section class="bg-[#FAF6EE] pt-12 pb-8">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-black text-[#1C1A14] mb-3" style="font-family: 'Playfair Display', serif;">
+        Preferisci parlare direttamente, alla <span class="text-[#C8891A]">"vecchia maniera"</span>?
+      </h1>
+      <p class="text-lg text-[#3D3828] leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Capisco. A volte è più semplice prendere il telefono e fare due chiacchiere, invece di compilare moduli e aspettare risposte.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="h-px bg-[#C8891A]/40 flex-1 max-w-20"></div>
+        <span class="text-[#C8891A] text-lg">✦</span>
+        <div class="h-px bg-[#C8891A]/40 flex-1 max-w-20"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Telefono -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-4" style="font-family: 'Playfair Display', serif;">
+        Chiamami
+      </h2>
+      <div style="font-family: 'Lato', sans-serif;" class="space-y-4">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se vuoi capire se Minicozzi Chef Lab può essere utile al tuo ristorante, chiamami.
+        </p>
+        <a
+          href="tel:+393381694969"
+          class="inline-flex items-center gap-3 text-2xl md:text-3xl font-black text-[#C8891A] hover:text-[#9E6A10] transition-colors"
+          style="font-family: 'Playfair Display', serif;"
+        >
+          <svg class="w-8 h-8 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          +39 338 169 4969
+        </a>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Rispondo io, Gianfranco. Non un centralino, non un commerciale. <strong>Io.</strong>
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Parliamo del tuo servizio, di cosa ti serve, di come lavoro. E decidiamo insieme se ha senso fare una prova.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-4" style="font-family: 'Playfair Display', serif;">
+        Oppure scrivimi
+      </h2>
+      <div style="font-family: 'Lato', sans-serif;" class="space-y-4">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se preferisci mandarmi un messaggio prima di chiamare, nessun problema.
+        </p>
+        <a
+          href="mailto:info@minicozzicheflab.it"
+          class="inline-flex items-center gap-3 text-xl md:text-2xl font-black text-[#C8891A] hover:text-[#9E6A10] transition-colors"
+          style="font-family: 'Playfair Display', serif;"
+        >
+          <svg class="w-7 h-7 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+          info@minicozzicheflab.it
+        </a>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Scrivimi pure. Ti richiamo io appena leggo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visita il laboratorio -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-4" style="font-family: 'Playfair Display', serif;">
+        Vuoi vedere come lavoriamo?
+      </h2>
+      <div style="font-family: 'Lato', sans-serif;" class="space-y-4">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se sei in zona e vuoi passare a vedere il laboratorio, sei il benvenuto. Molti chef prima di iniziare a lavorare con me vogliono vedere da vicino come produciamo, parlare di persona, toccare con mano la pasta.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          È normale. E per me è un piacere.
+        </p>
+
+        <!-- Indirizzo -->
+        <div class="bg-[#FAF6EE] border border-[#C8891A]/30 rounded-sm p-5 mt-4">
+          <p class="font-bold text-[#1C1A14] text-lg mb-1">Dove siamo:</p>
+          <p class="text-[#3D3828] text-lg italic">Campania — indirizzo in aggiornamento</p>
+          <p class="font-bold text-[#1C1A14] text-lg mt-4 mb-1">Orari laboratorio e spaccio:</p>
+          <p class="text-[#3D3828] text-lg italic">In aggiornamento</p>
+        </div>
+
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Ti consiglio di chiamarmi prima, così mi organizzo per essere presente e dedicarti il tempo giusto.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Nello stesso posto trovi anche lo <strong>spaccio aziendale</strong>, dove puoi acquistare la nostra pasta fresca e altri prodotti dell'Azienda Agricola Minicozzi anche per uso personale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prima di contattarmi -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Prima di contattarmi, sappi questo
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Non ti farò pressione.<br/>
+          Non ti chiederò di decidere subito.<br/>
+          Non ti proporrò pacchetti preconfezionati che non c'entrano nulla con il tuo ristorante.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Voglio solo capire se posso esserti utile. E l'unico modo per farlo è parlare di come lavori tu.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se ha senso, facciamo una prova gratuita.<br/>
+          Se non ha senso, te lo dico chiaramente e non perdiamo tempo né io né tu.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed font-bold">
+          Semplice così.
+        </p>
+
+        <!-- Firma -->
+        <div class="mt-8 pt-6 border-t border-[#C8891A]/30">
+          <p class="text-xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">Gianfranco Ranaldo</p>
+          <p class="text-[#8A8070] italic" style="font-family: 'Playfair Display', serif;">Fondatore di Minicozzi Chef Lab</p>
+          <p class="text-[#C8891A] font-semibold text-sm mt-1" style="font-family: 'Lato', sans-serif;">Pasta Fresca Su Misura in 72 Ore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA finale -->
+  <section class="bg-[#D9CEAE] py-14">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-xl md:text-2xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Pronto a fare due chiacchiere?
+      </p>
+      <CTAButton label="Scrivimi su WhatsApp" />
+    </div>
+  </section>
+
+  <FooterSection />
+</BaseLayout>

@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FooterSection from '../components/FooterSection.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout
+  title="Chi Siamo — Minicozzi ChefLab"
+  description="Scopri la storia di Minicozzi Chef Lab: dal grano alla pasta fresca su misura per ristoratori in Campania. Il metodo di Gianfranco Ranaldo."
+>
+
+  <!-- Hero mini -->
+  <section class="bg-[#FAF6EE] pt-12 pb-8">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-black text-[#1C1A14] mb-3" style="font-family: 'Playfair Display', serif;">
+        <span class="text-[#C8891A]">Minicozzi</span> Chef<span class="text-[#C8891A]">Lab</span>: chi siamo?
+      </h1>
+      <p class="text-xl md:text-2xl font-bold text-[#3D3828]" style="font-family: 'Playfair Display', serif;">
+        Non siamo nati ieri. E non vendiamo solo pasta.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="h-px bg-[#C8891A]/40 flex-1 max-w-20"></div>
+        <span class="text-[#C8891A] text-lg">✦</span>
+        <div class="h-px bg-[#C8891A]/40 flex-1 max-w-20"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6" style="font-family: 'Lato', sans-serif;">
+      <p class="text-lg text-[#1C1A14] leading-relaxed mb-4">
+        Minicozzi Chef Lab è il laboratorio di pasta fresca su misura che ho creato dentro <strong>Azienda Agricola Minicozzi</strong>, una realtà campana che con il grano ci lavora da generazioni.
+      </p>
+      <p class="text-lg text-[#1C1A14] leading-relaxed mb-4">
+        Non sono partito dal nulla per "lanciare un prodotto". Sono partito dalla terra, dal grano, dalla conoscenza di come si lavora la materia prima. E poi ho deciso di portare tutto questo dentro le cucine dei ristoranti.
+      </p>
+    </div>
+  </section>
+
+  <!-- Il laboratorio è nato da una domanda semplice -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Il laboratorio è nato da una domanda semplice
+      </h2>
+      <blockquote class="border-l-4 border-[#C8891A] pl-5 mb-6">
+        <p class="text-xl text-[#3D3828] italic font-semibold" style="font-family: 'Playfair Display', serif;">
+          "Perché gli chef devono scegliere tra fare tutto in casa o accontentarsi di pasta standard?"
+        </p>
+      </blockquote>
+      <p class="text-lg text-[#1C1A14] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+        Quando parli con chi lavora in cucina tutti i giorni, te lo dicono chiaro:
+      </p>
+      <ul class="space-y-3 mb-6" style="font-family: 'Lato', sans-serif;">
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">La pasta in casa è buonissima, ma ti divora tempo ed energie</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">La pasta dei fornitori spesso è "quasi" quella giusta, ma mai esattamente quella che serve</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">Quando hai bisogno di qualcosa di specifico, o di un intervento rapido, ti senti solo</span>
+        </li>
+      </ul>
+      <p class="text-lg text-[#1C1A14] leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Da questa domanda ho costruito <strong>Minicozzi Chef Lab</strong>: un laboratorio che produce pasta fresca progettata sui numeri reali, sui servizi veri, sulle cucine che lavorano sotto pressione.
+      </p>
+    </div>
+  </section>
+
+  <!-- Come sono arrivato a fare questo -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Come sono arrivato a fare questo
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Vengo da anni di lavoro nel settore agricolo, dal grano alla trasformazione. Ho visto tanti ristoranti lavorare bene, e tanti altri arrancare per colpa di fornitori che non capivano le loro esigenze.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          A un certo punto ho capito una cosa: <strong>la pasta fresca per un ristorante non è un ingrediente qualunque.</strong>
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          È il primo piatto. È quello che fa girare la sala. È quello che decide se un sabato sera va liscio o diventa un incubo.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          E troppi fornitori la trattano come se fosse un prodotto da banco.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Io volevo fare diversamente. Volevo creare un laboratorio che ascoltasse prima di produrre. Che progettasse prima di vendere. Che restasse accanto al ristorante anche dopo la consegna.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed font-bold">
+          Così è nato Minicozzi Chef Lab.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Il mio metodo -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Il mio metodo: prima capisco, poi produco
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Non produco pasta generica e poi cerco chi la compra. Faccio l'esatto opposto:
+        </p>
+        <div class="border-l-4 border-[#C8891A] pl-5 space-y-4">
+          <p class="text-lg text-[#1C1A14] leading-relaxed">
+            <strong>Prima parlo con te.</strong> Voglio capire come lavori: quanti coperti, che tipo di servizio, quali piatti hai in carta, dove senti più fatica sulla linea.
+          </p>
+          <p class="text-lg text-[#1C1A14] leading-relaxed">
+            <strong>Poi ragiono sulla pasta che ti serve davvero.</strong> Non quella "simile", quella esatta: spessore, formato, tenuta in cottura.
+          </p>
+          <p class="text-lg text-[#1C1A14] leading-relaxed">
+            <strong>La realizzo in 72 ore, massimo.</strong>
+          </p>
+          <p class="text-lg text-[#1C1A14] leading-relaxed">
+            <strong>Te la consegno e resto disponibile.</strong> Se durante il servizio c'è un problema, non sparisco. Intervengo.
+          </p>
+        </div>
+        <p class="text-lg text-[#1C1A14] leading-relaxed mt-4">
+          Questo per me significa lavorare su misura. <strong>Non è uno slogan. È un metodo.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perché lavoro solo in Campania -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Perché lavoro solo in Campania
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Potrei aprire a più zone, aumentare la produzione, prendere più clienti. Ma ho scelto di concentrarmi sulla Campania per un motivo preciso: <strong>voglio essere vicino.</strong>
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se devi fare una prova, vengo a vedere come va.<br/>
+          Se c'è un problema, arrivo io di persona.<br/>
+          Se dobbiamo ragionare su un nuovo formato, ci sediamo insieme e ne parliamo guardandoci in faccia.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Questa vicinanza non è negoziabile per me. Perché un laboratorio su misura che non può intervenire rapidamente, è solo un fornitore con uno slogan carino.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          E qui in Campania, dove la pasta è cultura prima che prodotto, non ci si può permettere mezze misure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perché ho messo un limite ai clienti -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Perché ho messo un limite ai clienti
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Ogni mese accetto solo un numero limitato di nuovi ristoranti. Non è una strategia di marketing. È una scelta operativa.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Seguire un ristorante nel modo giusto richiede tempo: tempo per analizzare il servizio, tempo per calibrare la pasta, tempo per essere disponibile quando serve.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Se dico sì a tutti, non posso più garantire il livello di attenzione che voglio dare. E allora divento anch'io uno di quei fornitori che rispondono "vediamo cosa possiamo fare" invece di risolvere i problemi.
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed font-bold">
+          Preferisco lavorare con meno ristoranti, ma lavorare bene.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Come decido con chi lavorare -->
+  <section class="bg-carta py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Come decido con chi lavorare
+      </h2>
+      <p class="text-lg text-[#1C1A14] leading-relaxed mb-4" style="font-family: 'Lato', sans-serif;">
+        Non ho criteri strani o filtri complicati. Cerco ristoranti che:
+      </p>
+      <ul class="space-y-3 mb-6" style="font-family: 'Lato', sans-serif;">
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">lavorano con numeri veri (non 20 coperti la domenica, ma servizi strutturati)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">hanno la pasta fresca come elemento centrale del menu</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">vogliono un partner che capisca le loro esigenze, non solo un fornitore che consegna</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#C8891A] text-lg mt-0.5">●</span>
+          <span class="text-lg text-[#1C1A14]">sono aperti a ragionare insieme su come migliorare il servizio</span>
+        </li>
+      </ul>
+      <p class="text-lg text-[#1C1A14] leading-relaxed" style="font-family: 'Lato', sans-serif;">
+        Se ti riconosci in questo, probabilmente possiamo lavorare bene insieme.
+      </p>
+    </div>
+  </section>
+
+  <!-- La mia promessa -->
+  <section class="bg-[#FAF6EE] py-12">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        La mia promessa <span class="text-[#8A8070] font-normal">(quella vera)</span>
+      </h2>
+      <div class="space-y-4" style="font-family: 'Lato', sans-serif;">
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Non ti prometto che la mia pasta è "la migliore". Non ti prometto che "non avrai più problemi".
+        </p>
+        <p class="text-lg text-[#1C1A14] leading-relaxed mb-2">
+          Ti prometto che:
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <span class="text-[#C8891A] text-lg mt-0.5">✓</span>
+            <span class="text-lg text-[#1C1A14]">ascolterò come lavori prima di proporti qualsiasi cosa</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#C8891A] text-lg mt-0.5">✓</span>
+            <span class="text-lg text-[#1C1A14]">produrrò la pasta pensando al tuo servizio specifico, non a un catalogo standard</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#C8891A] text-lg mt-0.5">✓</span>
+            <span class="text-lg text-[#1C1A14]">sarò disponibile quando serve, anche fuori orario</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#C8891A] text-lg mt-0.5">✓</span>
+            <span class="text-lg text-[#1C1A14]">se qualcosa va storto, interverrò subito senza scuse o rimpalli</span>
+          </li>
+        </ul>
+        <p class="text-lg text-[#1C1A14] leading-relaxed">
+          Questo è quello che so fare. E quello che voglio continuare a fare.
+        </p>
+
+        <!-- Firma -->
+        <div class="mt-8 pt-6 border-t border-[#C8891A]/30">
+          <p class="text-xl font-bold text-[#1C1A14]" style="font-family: 'Playfair Display', serif;">Gianfranco Ranaldo</p>
+          <p class="text-[#8A8070] italic" style="font-family: 'Playfair Display', serif;">Fondatore di Minicozzi Chef Lab</p>
+          <p class="text-[#C8891A] font-semibold text-sm mt-1" style="font-family: 'Lato', sans-serif;">Pasta Fresca Su Misura in 72 Ore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA finale -->
+  <section class="bg-[#D9CEAE] py-14">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-xl md:text-2xl font-bold text-[#1C1A14] mb-6" style="font-family: 'Playfair Display', serif;">
+        Vuoi scoprire se possiamo lavorare insieme?
+      </p>
+      <CTAButton label="Scrivimi su WhatsApp" />
+    </div>
+  </section>
+
+  <FooterSection />
+</BaseLayout>
