@@ -30,6 +30,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <!-- Telefono -->
   <section class="bg-carta py-12">
     <div class="max-w-2xl mx-auto px-6">
+      <!-- Foto Gianfranco -->
+      <div class="mb-8 rounded-sm overflow-hidden shadow-md">
+        <img
+          src={`${base}images/gianfranco-cucina.jpg`}
+          alt="Gianfranco Ranaldo — Minicozzi Chef Lab"
+          class="w-full h-48 md:h-72 object-cover"
+          onerror="this.onerror=null;this.style.display='none';"
+        />
+      </div>
       <h2 class="text-2xl md:text-3xl font-bold text-[#1C1A14] mb-4" style="font-family: 'Playfair Display', serif;">
         Chiamami
       </h2>
@@ -97,6 +106,16 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         <p class="text-lg text-[#1C1A14] leading-relaxed">
           È normale. E per me è un piacere.
         </p>
+
+        <!-- Foto laboratorio -->
+        <div class="mt-4 mb-4 rounded-sm overflow-hidden shadow-md">
+          <img
+            src={`${base}images/laboratorio.jpg`}
+            alt="Il laboratorio di pasta fresca Minicozzi Chef Lab"
+            class="w-full h-48 md:h-72 object-cover"
+            onerror="this.onerror=null;this.style.display='none';"
+          />
+        </div>
 
         <!-- Indirizzo -->
         <div class="bg-[#FAF6EE] border border-[#C8891A]/30 rounded-sm p-5 mt-4">
