@@ -1,0 +1,192 @@
+---
+---
+
+<!-- Pulsante accessibilità flottante basso-sinistra -->
+<div class="fixed bottom-6 left-6 z-50" id="a11y-widget">
+  <button
+    id="a11y-toggle"
+    class="bg-[#1C1A14] hover:bg-[#3D3828] text-[#FAF6EE] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+    aria-label="Impostazioni accessibilità"
+    title="Accessibilità"
+    aria-expanded="false"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="4.5" r="2.5"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v4m0 0l-3.5 7m3.5-7l3.5 7M6.5 10h11"/>
+    </svg>
+  </button>
+
+  <!-- Panel -->
+  <div
+    id="a11y-panel"
+    class="hidden absolute bottom-16 left-0 bg-[#1C1A14] text-[#FAF6EE] rounded-lg shadow-2xl p-5 w-72"
+    role="dialog"
+    aria-label="Impostazioni accessibilità"
+    style="font-family: 'Lato', sans-serif;"
+  >
+    <h3 class="text-base font-bold mb-4 border-b border-[#C8891A]/30 pb-2" style="font-family: 'Playfair Display', serif;">
+      Accessibilità
+    </h3>
+
+    <!-- Dimensione testo -->
+    <div class="mb-4">
+      <p class="text-sm text-[#8A8070] mb-2">Dimensione testo</p>
+      <div class="flex gap-2">
+        <button data-a11y="font-decrease" class="a11y-btn flex-1 bg-[#3D3828] hover:bg-[#C8891A] text-white text-sm py-2 rounded-sm transition-colors cursor-pointer" aria-label="Riduci testo">A-</button>
+        <button data-a11y="font-reset" class="a11y-btn flex-1 bg-[#3D3828] hover:bg-[#C8891A] text-white text-sm py-2 rounded-sm transition-colors cursor-pointer" aria-label="Testo normale">A</button>
+        <button data-a11y="font-increase" class="a11y-btn flex-1 bg-[#3D3828] hover:bg-[#C8891A] text-white text-sm py-2 rounded-sm transition-colors cursor-pointer" aria-label="Ingrandisci testo">A+</button>
+      </div>
+    </div>
+
+    <!-- Contrasto -->
+    <div class="mb-4">
+      <p class="text-sm text-[#8A8070] mb-2">Contrasto</p>
+      <div class="flex gap-2">
+        <button data-a11y="contrast-normal" class="a11y-btn flex-1 bg-[#3D3828] hover:bg-[#C8891A] text-white text-sm py-2 rounded-sm transition-colors cursor-pointer" aria-label="Contrasto normale">Normale</button>
+        <button data-a11y="contrast-high" class="a11y-btn flex-1 bg-[#3D3828] hover:bg-[#C8891A] text-white text-sm py-2 rounded-sm transition-colors cursor-pointer" aria-label="Alto contrasto">Alto</button>
+      </div>
+    </div>
+
+    <!-- Link evidenziati -->
+    <div class="mb-4">
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="checkbox" id="a11y-links" class="w-4 h-4 accent-[#C8891A] cursor-pointer" />
+        <span class="text-sm">Evidenzia link</span>
+      </label>
+    </div>
+
+    <!-- Animazioni ridotte -->
+    <div class="mb-4">
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="checkbox" id="a11y-motion" class="w-4 h-4 accent-[#C8891A] cursor-pointer" />
+        <span class="text-sm">Riduci animazioni</span>
+      </label>
+    </div>
+
+    <!-- Reset -->
+    <button
+      data-a11y="reset-all"
+      class="w-full bg-[#C8891A] hover:bg-[#9E6A10] text-white text-sm font-bold py-2 rounded-sm transition-colors mt-1 cursor-pointer"
+    >
+      Ripristina tutto
+    </button>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('a11y-toggle');
+  const panel = document.getElementById('a11y-panel');
+  const root = document.documentElement;
+
+  // Toggle panel
+  toggle?.addEventListener('click', () => {
+    const isOpen = !panel?.classList.contains('hidden');
+    panel?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Close on click outside
+  document.addEventListener('click', (e) => {
+    const widget = document.getElementById('a11y-widget');
+    if (widget && !widget.contains(e.target as Node)) {
+      panel?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Font size
+  let fontSize = parseInt(localStorage.getItem('a11y-font-size') || '100');
+  applyFontSize();
+
+  document.querySelector('[data-a11y="font-increase"]')?.addEventListener('click', () => {
+    fontSize = Math.min(fontSize + 15, 150);
+    applyFontSize();
+  });
+  document.querySelector('[data-a11y="font-decrease"]')?.addEventListener('click', () => {
+    fontSize = Math.max(fontSize - 15, 70);
+    applyFontSize();
+  });
+  document.querySelector('[data-a11y="font-reset"]')?.addEventListener('click', () => {
+    fontSize = 100;
+    applyFontSize();
+  });
+
+  function applyFontSize() {
+    root.style.fontSize = fontSize + '%';
+    localStorage.setItem('a11y-font-size', String(fontSize));
+  }
+
+  // High contrast
+  const savedContrast = localStorage.getItem('a11y-contrast') || 'normal';
+  if (savedContrast === 'high') applyHighContrast(true);
+
+  document.querySelector('[data-a11y="contrast-normal"]')?.addEventListener('click', () => {
+    applyHighContrast(false);
+    localStorage.setItem('a11y-contrast', 'normal');
+  });
+  document.querySelector('[data-a11y="contrast-high"]')?.addEventListener('click', () => {
+    applyHighContrast(true);
+    localStorage.setItem('a11y-contrast', 'high');
+  });
+
+  function applyHighContrast(on: boolean) {
+    if (on) {
+      root.style.filter = 'contrast(1.4)';
+    } else {
+      root.style.filter = '';
+    }
+  }
+
+  // Highlight links
+  const linksCheckbox = document.getElementById('a11y-links') as HTMLInputElement;
+  const savedLinks = localStorage.getItem('a11y-highlight-links') === 'true';
+  if (linksCheckbox) linksCheckbox.checked = savedLinks;
+  if (savedLinks) applyHighlightLinks(true);
+
+  linksCheckbox?.addEventListener('change', () => {
+    applyHighlightLinks(linksCheckbox.checked);
+    localStorage.setItem('a11y-highlight-links', String(linksCheckbox.checked));
+  });
+
+  function applyHighlightLinks(on: boolean) {
+    if (on) {
+      root.classList.add('a11y-highlight-links');
+    } else {
+      root.classList.remove('a11y-highlight-links');
+    }
+  }
+
+  // Reduce motion
+  const motionCheckbox = document.getElementById('a11y-motion') as HTMLInputElement;
+  const savedMotion = localStorage.getItem('a11y-reduce-motion') === 'true';
+  if (motionCheckbox) motionCheckbox.checked = savedMotion;
+  if (savedMotion) applyReduceMotion(true);
+
+  motionCheckbox?.addEventListener('change', () => {
+    applyReduceMotion(motionCheckbox.checked);
+    localStorage.setItem('a11y-reduce-motion', String(motionCheckbox.checked));
+  });
+
+  function applyReduceMotion(on: boolean) {
+    if (on) {
+      root.classList.add('a11y-reduce-motion');
+    } else {
+      root.classList.remove('a11y-reduce-motion');
+    }
+  }
+
+  // Reset all
+  document.querySelector('[data-a11y="reset-all"]')?.addEventListener('click', () => {
+    fontSize = 100;
+    applyFontSize();
+    applyHighContrast(false);
+    applyHighlightLinks(false);
+    applyReduceMotion(false);
+    if (linksCheckbox) linksCheckbox.checked = false;
+    if (motionCheckbox) motionCheckbox.checked = false;
+    localStorage.removeItem('a11y-font-size');
+    localStorage.removeItem('a11y-contrast');
+    localStorage.removeItem('a11y-highlight-links');
+    localStorage.removeItem('a11y-reduce-motion');
+  });
+</script>
